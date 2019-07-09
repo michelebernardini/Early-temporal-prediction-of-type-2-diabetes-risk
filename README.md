@@ -5,4 +5,4 @@ The aim of this study was to propose a multiple instance learning boosting algor
 
 We tested the predictive performance of the MIL-Boost approach on the Italian Federation of General Practitioners dataset, named FIMMG_pred dataset, publicly available at the following link: http://vrai.dii.univpm.it/content/fimmgpred-dataset
 
-Matlab code to replicate the MIL-Boost experimental procedure is provided by the authors.
+Matlab code to replicate the MIL-Boost experimental procedure with KNN data imputation is provided by the authors.
