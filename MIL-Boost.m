@@ -1,6 +1,6 @@
-addpath(genpath('mil'))
+addpath(genpath('MIL'))
 addpath(genpath('prtools'))
-addpath(genpath('minFunc_2012'))
+addpath(genpath('minfunc'))
 %%
 clear; clc; close all
 prwarning(0)
