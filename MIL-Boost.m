@@ -1,4 +1,9 @@
+addpath(genpath('mil'))
+addpath(genpath('prtools'))
+addpath(genpath('minFunc_2012'))
+%%
 clear; clc; close all
+prwarning(0)
 
 load('XY_MIL.mat') %load data
 
@@ -8,10 +13,7 @@ fold_out=10;
 fold_in=5;
 
 global lrsel wlsel lropt wlopt;
-lrsel=0;
-wlsel=0;
-lropt=0;
-wlopt=0;
+lrsel=0;wlsel=0;lropt=0;wlopt=0;
 
 lr=[0.0001 0.001 0.01 0.1 1 10 100];
 wl=[5 10 15];
@@ -225,7 +227,7 @@ for out=1:fold_out
         for h=1:length(lr)
             for hh=1:length(wl)
             setGlobalx(lr(h),wl(hh),0,0);
-            w_opt=boosting_mil_in(milDataset2TR_in); % Number of weak learners 50
+            w_opt=boosting_mil_in(milDataset2TR_in);
     
             yp_opt2=[];
             yp_opt=milDataset2TE_in*w_opt*labeld;
@@ -261,7 +263,6 @@ for out=1:fold_out
     
     indice_opt_lr(out)=optlr;
     indice_opt_wl(out)=optwl;
-    
     
     %% TRAIN
     
@@ -303,6 +304,7 @@ for out=1:fold_out
     w=boosting_mil_out(milDataset2TR); % Number of weak learners 50
 
     %% TEST   
+    
     yp2=[];
     yp=milDataset2TE*w*labeld;
     
@@ -335,8 +337,5 @@ FDDmacro_tot=mean(FDDmacro);
 FDDprecision_tot=mean(FDDprecision);
 FDDrecall_tot=mean(FDDrecall);
 FDDAUC_tot=mean(FDDAUC);
-
-MEAN_tot=[FDDaccuracy_tot FDDmacro_tot FDDprecision_tot FDDrecall_tot FDDAUC_tot];
-STD_tot=[std(accDDtest) std(FDDmacro) std(FDDprecision) std(FDDrecall) std(FDDAUC)];
 
 save('resultsMILBoost_knn_noTyg_10')
