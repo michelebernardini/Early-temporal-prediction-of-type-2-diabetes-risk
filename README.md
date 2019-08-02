@@ -1,4 +1,4 @@
-# Early temporal prediction of Type 2 Diabetes Risk Conditions from a General Practitioner Electronic Health Record: a Multiple Instance Learning Boosting Approach
+# Early temporal prediction of Type 2 Diabetes Risk Condition from a General Practitioner Electronic Health Record: A Multiple Instance Learning Boosting Approach
 submitted to Artificial Intelligence in Medicine by M. Bernardini, M. Morettini, L. Romeo, E. Frontoni and L. Burattini
 
 The aim of this study was to propose a multiple instance learning boosting algorithm, named MIL-Boost. The MIL-Boost was applied to past electronic health record patients' information stored by a unique General Prctitioner in order to create a predictive model capable of early predicting insulin resistance worsening (low vs high T2D risk) in terms of TyG index.
