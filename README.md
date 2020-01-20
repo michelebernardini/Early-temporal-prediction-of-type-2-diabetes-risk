@@ -5,6 +5,6 @@ The aim of this study was to propose a multiple instance learning boosting algor
 
 We tested the predictive performance of the MIL-Boost approach on the Italian Federation of General Practitioners dataset, named FIMMG_pred dataset, publicly available at the following link: http://vrai.dii.univpm.it/content/fimmgpred-dataset
 
-Run MILBoost.m file to replicate the MIL-Boost experimental procedure with KNN data imputation is provided by the authors.
+Run MILBoost.m file to replicate the MIL-Boost experimental procedure.
 
 The authors have been inspired in part by the Multiple Instance Learning algorithm developed by David M. J. Tax (https://github.com/DMJTax/mil).
